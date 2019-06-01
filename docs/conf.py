@@ -24,6 +24,8 @@ author = 'Willem van Ketwich'
 # The full version, including alpha/beta/rc tags
 release = '0.1'
 
+# as per: https://github.com/rtfd/readthedocs.org/issues/2569
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
