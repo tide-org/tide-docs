@@ -1,3 +1,7 @@
+How plugin paths work
+=====================
+
+
 - There is a default config that is called regardless.
 - Either the ENV VAR or the config_location.yml file will determine the base config file.
 
@@ -5,7 +9,7 @@
 
 - The config files are then all merged, starting with the default config file, followed by the last in the config chain all the way up to the config file that was referenced by env var or the config_location.yaml file.
 
-- Then for all the different plugins, the same order for loading is done. 
+- Then for all the different plugins, the same order for loading is done.
 
 - For things like functions, it pays not to have the same name as a name in a base class as the base version will be called first (may change this).
 

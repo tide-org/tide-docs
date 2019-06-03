@@ -1,3 +1,6 @@
+Types
+=====
+
 The config file has a set of config commands that make up a config_command_item.
 
 these config commands have a series of steps, or config_command_actions, or just command_actions.

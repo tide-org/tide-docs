@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Buffers &#8212; Tide 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How filters work:" href="filters.html" />
+    <link rel="prev" title="How plugin paths work" href="../config/plugin_paths.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="buffers">
+<h1>Buffers<a class="headerlink" href="#buffers" title="Permalink to this headline">¶</a></h1>
+<p>buffers list the buffers/windows available to be displayed.</p>
+<p>a buffer has a set of options:</p>
+<p>on_startup: determines whether the buffer starts at startup of :Vgdb
+command: a config command that can be run for the buffer every time an action occurs
+line_numbers: determines whether the buffer will have line numbers or not
+buffer_filename_variable: if set, specifies the name of a variable to use for specifying the filename of the buffer. if not specified, the buffer will be named as per the config file designation.
+primary_window: if true, the buffer will be the primary window in the editor and will not be stacked with other windows. There should be only one primary window. The primary window is usually used for code editing. Non-primary windows are for more trivial (but still important) windows.
+language: defines the syntax language to use for syntax highlighting in the buffer.</p>
+<dl class="simple">
+<dt>events: these can happen either:</dt><dd><p>before_command
+after_command</p>
+</dd>
+</dl>
+<p>and are extra commands that run before/after the <cite>command:</cite> command has run.
+Each command can be presupposed with ‘input_args:’ which are a list of key-values that are sent to the command for further processing depending on the context. Usually used when running python or vim functions.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Tide</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation of Tide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/c_debug_help.html">GDB commands (reference guide)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/keys.html">Setting up keys in Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/actions.html">Actions in Tide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/commands.html">Commands and Config Commands, Actions and Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/description.html">Overview of the key config sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/plugin_paths.html">How plugin paths work</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Buffers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">How filters work:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">Types</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../config/plugin_paths.html" title="previous chapter">How plugin paths work</a></li>
+      <li>Next: <a href="filters.html" title="next chapter">How filters work:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Willem van Ketwich.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/components/buffers.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

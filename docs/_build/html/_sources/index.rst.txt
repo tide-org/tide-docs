@@ -9,12 +9,20 @@ Welcome to Tide's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
    usage/installation
    usage/quickstart
-   config/config_commands
-   config/config_description
-   config/config_plugin_paths
-   config/config_spec
+   support/c_debug_help
+   support/gdb_notes
+   support/keys
+   guides/assembly
+   config/actions
+   config/commands
+   config/description
+   config/plugin_paths
+   components/buffers
+   components/filters
+   components/types
 
 Indices and tables
 ==================

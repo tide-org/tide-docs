@@ -1,3 +1,6 @@
+Actions in Tide
+===============
+
 There are various built-in actions that can be used to do useful things with vgdb in commands.
 
 The built-in actions consist of:

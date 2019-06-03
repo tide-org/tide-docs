@@ -1,8 +1,5 @@
-# Setting up keys:
-
-
-
-
+Setting up keys in Vim
+======================
 
 " ide keys: https://delphi.fandom.com/wiki/Default_IDE_Shortcut_Keys
 " start

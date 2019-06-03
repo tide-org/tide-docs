@@ -1,5 +1,5 @@
-# How filters work:
-
+How filters work:
+=================
 
 base filter
 

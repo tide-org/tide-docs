@@ -1,4 +1,5 @@
-# Main sections:
+Overview of the key config sections
+===================================
 
 buffers:
 
