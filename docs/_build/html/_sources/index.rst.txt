@@ -9,8 +9,12 @@ Welcome to Tide's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-
+   usage/installation
+   usage/quickstart
+   config/config_commands
+   config/config_description
+   config/config_plugin_paths
+   config/config_spec
 
 Indices and tables
 ==================

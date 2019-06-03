@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Tide’s documentation! &#8212; Tide 0.1 documentation</title>
+    <title>&lt;no title&gt; &#8212; Tide 0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -30,17 +30,29 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-tide-s-documentation">
-<h1>Welcome to Tide’s documentation!<a class="headerlink" href="#welcome-to-tide-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+  <p>[ ] write some small tutorials on how to do things with the config files and filters/functions</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<li><p>do a hello world example</p></li>
+<li><p>do a logging to buffer example</p></li>
+<li><p>do a python function example</p></li>
+<li><p>show grabbing a variable from a filter</p></li>
+<li><p>show setting a variable from config and using it in a config command</p></li>
+<li><p>show setting a variable from config and using it in a python function</p></li>
 </ul>
-</div>
+<p>Standard process:</p>
+<p>The standard process is to have a buffer designated for accepting the output of a command.</p>
+<p>The command is run against the process and the output is filtered then placed in the buffer.</p>
+<p>A buffer is specified in the config under the buffers section.</p>
+<p>A command is specified in the config under the commands section.</p>
+<p>A filter is specified in a path (that has been set in the config settings). A filter is for a buffer and will have the same name as the buffer it is providing output for. A base filter may also be provided to do some initial filtering before the buffer’s filter does it’s work.</p>
+<p>For example, the process for running a single command would have the following flow:</p>
+<p>Run named config command from Vim -&gt; command is run against running process -&gt; output is filtered with a base filter -&gt; output is filtered with the buffer’s filter -&gt; output is displayed in vim</p>
+<p>The name of the buffer that the command is for can be set in one of the following ways:</p>
+<ul class="simple">
+<li><p>If the command is called from the buffer, e.g. &lt;buffer_name&gt;.command: the buffer name will be passed to the command.</p></li>
+<li><p>If the command is called as an event after a buffer command is run e.g. &lt;buffer_name&gt;.events:</p></li>
+<li><p>If the buffer_name is specified explicitly in a run_command config command.</p></li>
+</ul>
 
 
           </div>
@@ -49,7 +61,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">Tide</a></h1>
+<h1 class="logo"><a href="index.html">Tide</a></h1>
 
 
 
@@ -63,7 +75,7 @@
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
+  <li><a href="index.html">Documentation overview</a><ul>
   </ul></li>
 </ul>
 </div>
@@ -97,7 +109,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.rst.txt"
+      <a href="_sources/tuts.md.txt"
           rel="nofollow">Page source</a>
     </div>
 

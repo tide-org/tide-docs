@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Tide’s documentation! &#8212; Tide 0.1 documentation</title>
+    <title>Buffers &#8212; Tide 0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -30,15 +30,22 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-tide-s-documentation">
-<h1>Welcome to Tide’s documentation!<a class="headerlink" href="#welcome-to-tide-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="buffers">
+<h1>Buffers<a class="headerlink" href="#buffers" title="Permalink to this headline">¶</a></h1>
+<p>buffers list the buffers/windows available to be displayed.</p>
+<p>a buffer has a set of options:</p>
+<p>on_startup: determines whether the buffer starts at startup of :Vgdb
+command: a config command that can be run for the buffer every time an action occurs
+line_numbers: determines whether the buffer will have line numbers or not
+buffer_filename_variable: if set, specifies the name of a variable to use for specifying the filename of the buffer. if not specified, the buffer will be named as per the config file designation.
+primary_window: if true, the buffer will be the primary window in the editor and will not be stacked with other windows. There should be only one primary window. The primary window is usually used for code editing. Non-primary windows are for more trivial (but still important) windows.
+language: defines the syntax language to use for syntax highlighting in the buffer.
+events: these can happen either:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<li><p>before_command</p></li>
+<li><p>after_command
+and are extra commands that run before/after the <code class="docutils literal notranslate"><span class="pre">command:</span></code> command has run.
+Each command can be presupposed with ‘input_args:’ which are a list of key-values that are sent to the command for further processing depending on the context. Usually used when running python or vim functions.</p></li>
 </ul>
 </div>
 
@@ -49,7 +56,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">Tide</a></h1>
+<h1 class="logo"><a href="index.html">Tide</a></h1>
 
 
 
@@ -63,7 +70,7 @@
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
+  <li><a href="index.html">Documentation overview</a><ul>
   </ul></li>
 </ul>
 </div>
@@ -97,7 +104,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.rst.txt"
+      <a href="_sources/buffers.md.txt"
           rel="nofollow">Page source</a>
     </div>
 

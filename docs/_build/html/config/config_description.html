@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Main sections: &#8212; Tide 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="main-sections">
+<h1>Main sections:<a class="headerlink" href="#main-sections" title="Permalink to this headline">¶</a></h1>
+<p>buffers:</p>
+<p>commands:</p>
+<p>events:</p>
+<p>settings:</p>
+<ul class="simple">
+<li><p>buffers:</p>
+<ul>
+<li><p>base_filter_name: is the name of a filter to filter all output with. default is ‘’. if specified, this corresponds with a filter name in the filters path.</p></li>
+<li><p>error_filter_name: is the name of a filter to be applied to output to capture error logs and transform output in some way based on it, if necessary.</p></li>
+<li><p>error_buffer_name: this is the name of an internal buffer to hold the results of the error filter ‘error_filter_name’ in. this is in the config dictionary as vg_config_dictionary[“internal”][“buffers”][error_buffer_name]</p></li>
+<li><p>stack_buffers_by_default: if true, this stacks all new buffers in a single window that splits horizontally with every new buffer.</p></li>
+<li><p>stack_buffer_window_width: this is the width in characters that the buffer will take up of the screen (some of this may need to move once cross-editor is implemented)</p></li>
+<li></li>
+</ul>
+</li>
+<li><p>debugging:</p>
+<ul>
+<li><p>log_to_file: if true, debugging output is logged to a file</p></li>
+<li><p>log_filename: the name of the file for output of vgdb</p></li>
+<li><p>debug_*: all the options starting with debug_ are various modules to enable debugging for. e.g. debug_command_action is for the module command_action, with the class CommandAction.</p></li>
+</ul>
+</li>
+<li><p>editor:</p>
+<ul>
+<li><p>name: is the name of the editor that the config will be used for. defaults to ‘vim81’</p></li>
+</ul>
+</li>
+<li><p>logging:</p>
+<ul>
+<li><p>use_session_log_file: specifies if the output of the session_log will be written to a file. defaults to true.</p></li>
+<li><p>session_log_filename: the name of the file to output the session_log to defaults to ‘vgdb_session.log’</p></li>
+<li><p>session_buffer_name: the name of the buffer to use to store the session_log. defaults to vg_session_log’</p></li>
+<li><p>add_timestamp: if true, adds a timestmp to the session log for every entry. defaults to true.</p></li>
+</ul>
+</li>
+<li><p>plugins:</p>
+<ul>
+<li><p>actions_path: the location of actions relative to the config path, or absolute. defaults to ‘../actions’. actions can be used to extend the functionality of commands in the config.</p></li>
+<li><p>filters_path: the location of filters relative to the config path, or absolute. filters are used for capturing specific information from the output for processing in a buffer. defaults to ‘../filters</p></li>
+<li><p>functions_path: the location of functions that can be called from commands in the config. defaults to ‘../functions’</p></li>
+</ul>
+</li>
+<li><p>processes:</p>
+<ul>
+<li><p>ttl_stream_timeout: the time in seconds of how long to wait before timing out on the output of the ttl stream from the process. defaults to 0.08s.</p></li>
+<li><p>run_command_on_startup: if true, runs a command at startup of Vgdb as specified by ‘command_to_run_on_startup’</p></li>
+<li><p>command_to_run_on_startup: TODO: requires rework</p></li>
+<li><p>command_on_startup_log_file: TODO: same</p></li>
+<li><p>main_process_name: the name of the process to start for output</p></li>
+<li><p>main_process_default_arguments: a space-separated list of arguments to pass to the main process</p></li>
+<li><p>find_full_process_name: this locates the full path to the process to run if only the name is specified. similar to using ‘which’.</p></li>
+<li><p>end_of_output_regex: a regex that determines the end of output after running a command on the process. This is usually for terminal-type applications.</p></li>
+</ul>
+</li>
+</ul>
+<p>variables:</p>
+<ul class="simple">
+<li><p>contains a list of user-defined variables. these can be accessed in the config and are usually used for specifying defaults for variables and making explicit what variables are being used. This is the main way information is passed between commands. variables can also be updated from filters and functions, or even actions.</p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Tide</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Willem van Ketwich.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/config/config_description.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
