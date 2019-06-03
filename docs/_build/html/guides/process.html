@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Standard process for Tide &#8212; Tide 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Actions in Tide" href="../config/actions.html" />
+    <link rel="prev" title="Vgdb guide" href="vgdb.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="standard-process-for-tide">
+<h1>Standard process for Tide<a class="headerlink" href="#standard-process-for-tide" title="Permalink to this headline">¶</a></h1>
+<p>The standard process is to have a buffer designated for accepting the output of a command.</p>
+<p>The command is run against the process and the output is filtered then placed in the buffer.</p>
+<p>A buffer is specified in the config under the buffers section.</p>
+<p>A command is specified in the config under the commands section.</p>
+<p>A filter is specified in a path (that has been set in the config settings). A filter is for a buffer and will have the same name as the buffer it is providing output for. A base filter may also be provided to do some initial filtering before the buffer’s filter does it’s work.</p>
+<p>For example, the process for running a single command would have the following flow:</p>
+<p>Run named config command from Vim -&gt; command is run against running process -&gt; output is filtered with a base filter -&gt; output is filtered with the buffer’s filter -&gt; output is displayed in vim</p>
+<p>The name of the buffer that the command is for can be set in one of the following ways:
+- If the command is called from the buffer, e.g. &lt;buffer_name&gt;.command: the buffer name will be passed to the command.
+- If the command is called as an event after a buffer command is run e.g. &lt;buffer_name&gt;.events:
+- If the buffer_name is specified explicitly in a run_command config command.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Tide</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation of Tide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/c_debug_help.html">GDB commands (reference guide)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/keys.html">Setting up keys in Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vgdb.html">Vgdb guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Standard process for Tide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/actions.html">Actions in Tide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/commands.html">Commands and Config Commands, Actions and Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/description.html">Overview of the key config sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/plugin_paths.html">How plugin paths work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/buffers.html">Buffers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/filters.html">How filters work:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/types.html">Types</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="vgdb.html" title="previous chapter">Vgdb guide</a></li>
+      <li>Next: <a href="../config/actions.html" title="next chapter">Actions in Tide</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Willem van Ketwich.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/guides/process.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

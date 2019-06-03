@@ -16,6 +16,8 @@ Welcome to Tide's documentation!
    support/gdb_notes
    support/keys
    guides/assembly
+   guides/vgdb
+   guides/process
    config/actions
    config/commands
    config/description
@@ -23,10 +25,3 @@ Welcome to Tide's documentation!
    components/buffers
    components/filters
    components/types
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
